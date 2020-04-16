@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+        integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+
+        <style>
+            .js-items {
+                color: black;
+            }
+            .is-blue {
+                color: blue;
+            }
+        </style>
+</head>
+
+<body>
+    <!--
+        https://book.51cto.com/art/201901/589984.htm
+        为什么选择 Vue.js JQuery 範例
+        -->
+
+
+    <ul class="js-items">
+    </ul>
+    <script>
+        $(function () {
+            $.get('https://localhost:44334/api/JsItems')
+                .then(function (data) {
+                    var $itemsUl = $('.js-items');
+
+                    if (!data.items.length) {
+                        
+                        var $noItems = $('<li>');
+                        console.log($noItems);
+                        $noItems.text('Sorry, there are no items.');
+                        $itemsUl.append($noItems);
+                    } else {
+                        
+                        data.items.forEach(function (item) {
+                            var $newItem = $('<li>');
+                            $newItem.text(item);
+                            if (item.includes('blue')) {
+                                $newItem.addClass('is-blue');
+                            }
+                            $itemsUl.append($newItem);
+                        });
+                    }
+                });
+        });  
+    </script>
+
+</body>
+
+</html>
