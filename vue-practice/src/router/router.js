@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 
 import Home from "../components/home";
 import About from "../components/about";
+import Sample1 from "../components/js-item-sample";
 
 Vue.use(VueRouter);
 
@@ -17,6 +18,11 @@ const routes = [
         name: 'About',
         component: About
     },
+    {
+        path: '/sample1',
+        name: 'Sample1',
+        component: Sample1
+    }
 ];
 
 export default new VueRouter({
