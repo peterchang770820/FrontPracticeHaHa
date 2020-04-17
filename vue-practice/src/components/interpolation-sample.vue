@@ -1,25 +1,20 @@
 <template>
-  <div class="about" :title="message" @click="myalert">
-    <UrlPath />
-    <div>{{ text }}</div>
-    <div>
-      <!-- <icon name="check-circle" scale="2" /> -->
-    </div>
+  <div class="interpolation-sample" :title="message" @click="myalert">
+    <p>Hello, {{ greetee }}</p>
   </div>
 </template>
 
 <script>
 
-import UrlPath from "./url-path";
 export default {
-  name: "about",
+  name: "interpolation-sample",
   props: ["message"],
   components: {
-    UrlPath
   },
   data() {
     return {
-      text: "about component"
+      greetee: 'world',
+      text: "interpolation-sample component"
     };
   },
   methods: {
@@ -34,7 +29,7 @@ export default {
 </script>
 
 <style scoped>
-.about {
+.interpolation-sample {
   font-weight: bold;
   color: #41b883;
 }
