@@ -6,6 +6,7 @@ import About from "../components/about";
 import Sample1 from "../components/js-item-sample";
 import Sample2 from "../components/say-hi";
 import Sample3 from "../components/interpolation-sample";
+import Dogs from '../components/dogs';
 
 Vue.use(VueRouter);
 
@@ -34,6 +35,11 @@ const routes = [
         path: '/sample3',
         name: 'Sample3',
         component: Sample3
+    },
+    {
+        path: '/dogs',
+        name: 'Dogs',
+        component: Dogs
     }
 ];
 
