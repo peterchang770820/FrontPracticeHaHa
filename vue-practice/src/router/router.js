@@ -9,6 +9,7 @@ import Sample3 from "../components/interpolation-sample";
 import Dogs from '../components/dogs';
 import VShow from '../components/vshow';
 import CityRent from '../components/city-avg-rent';
+import VFor from '../components/v-for';
 
 Vue.use(VueRouter);
 
@@ -52,6 +53,11 @@ const routes = [
         path: '/cityrent',
         name: 'CityRent',
         component: CityRent
+    },
+    {
+        path: '/vfor',
+        name: 'VFor',
+        component: VFor
     }
 ];
 
