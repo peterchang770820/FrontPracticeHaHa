@@ -12,6 +12,7 @@ import CityRent from '../components/city-avg-rent';
 import VFor from '../components/v-for';
 import VBind from '../components/v-bind';
 import Seconds from '../components/seconds';
+import ReactivitySample from '../components/reactivity-sample';
 
 Vue.use(VueRouter);
 
@@ -70,6 +71,11 @@ const routes = [
         path: '/seconds',
         name: 'Seconds',
         component: Seconds
+    },
+    {
+        path: '/rs',
+        name: 'RS',
+        component: ReactivitySample
     }
 ];
 
