@@ -8,6 +8,7 @@ import Sample2 from "../components/say-hi";
 import Sample3 from "../components/interpolation-sample";
 import Dogs from '../components/dogs';
 import VShow from '../components/vshow';
+import CityRent from '../components/city-avg-rent';
 
 Vue.use(VueRouter);
 
@@ -46,6 +47,11 @@ const routes = [
         path: '/vshow',
         name: 'VShow',
         component: VShow
+    },
+    {
+        path: '/cityrent',
+        name: 'CityRent',
+        component: CityRent
     }
 ];
 
