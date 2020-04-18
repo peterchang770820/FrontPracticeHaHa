@@ -10,6 +10,7 @@ import Dogs from '../components/dogs';
 import VShow from '../components/vshow';
 import CityRent from '../components/city-avg-rent';
 import VFor from '../components/v-for';
+import VBind from '../components/v-bind';
 
 Vue.use(VueRouter);
 
@@ -58,6 +59,11 @@ const routes = [
         path: '/vfor',
         name: 'VFor',
         component: VFor
+    },
+    {
+        path: '/vbind',
+        name: 'VBind',
+        component: VBind
     }
 ];
 
