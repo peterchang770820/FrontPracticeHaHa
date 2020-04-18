@@ -11,6 +11,7 @@ import VShow from '../components/vshow';
 import CityRent from '../components/city-avg-rent';
 import VFor from '../components/v-for';
 import VBind from '../components/v-bind';
+import Seconds from '../components/seconds';
 
 Vue.use(VueRouter);
 
@@ -64,6 +65,11 @@ const routes = [
         path: '/vbind',
         name: 'VBind',
         component: VBind
+    },
+    {
+        path: '/seconds',
+        name: 'Seconds',
+        component: Seconds
     }
 ];
 
