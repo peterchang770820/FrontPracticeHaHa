@@ -6,30 +6,33 @@
     <p>The third dog is {{ dogs[2] }}</p>
     <p>The fourth dog is {{ dogs[3] }}</p>
     <p>All the dogs are {{ dogs }}</p>
+
+    <p>v-for 練習</p>
+    <ul>
+      <li v-for="dog in dogs" :key="dog">{{ dog }}</li>
+    </ul>
   </div>
 </template>
 
 <script>
-
 export default {
   name: "dogs",
   props: ["message"],
-  components: {
-  },
+  components: {},
   data() {
     return {
       text: "dogs component",
-      dogs: ['Rex', 'Rover', 'Henrietta', 'Alan']
+      dogs: ["Rex", "Rover", "Henrietta", "Alan"],
     };
   },
   methods: {
     myalert() {
       alert(this.message);
-    }
+    },
   },
   created() {
     this.text += ", click me!";
-  }
+  },
 };
 </script>
 
