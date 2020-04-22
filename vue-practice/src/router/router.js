@@ -14,6 +14,7 @@ import VBind from '../components/v-bind';
 import Seconds from '../components/seconds';
 import ReactivitySample from '../components/reactivity-sample';
 import TwoWay from '../components/two-way';
+import VHtml from '../components/v-html';
 
 Vue.use(VueRouter);
 
@@ -82,6 +83,11 @@ const routes = [
         path: '/twoway',
         name: 'TwoWay',
         component: TwoWay
+    },
+    {
+        path: '/vhtml',
+        name: 'VHtml',
+        component: VHtml
     }
 ];
 
