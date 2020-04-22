@@ -13,6 +13,7 @@ import VFor from '../components/v-for';
 import VBind from '../components/v-bind';
 import Seconds from '../components/seconds';
 import ReactivitySample from '../components/reactivity-sample';
+import TwoWay from '../components/two-way';
 
 Vue.use(VueRouter);
 
@@ -76,6 +77,11 @@ const routes = [
         path: '/rs',
         name: 'RS',
         component: ReactivitySample
+    },
+    {
+        path: '/twoway',
+        name: 'TwoWay',
+        component: TwoWay
     }
 ];
 
