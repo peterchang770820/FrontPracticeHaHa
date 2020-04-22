@@ -15,6 +15,8 @@ import Seconds from '../components/seconds';
 import ReactivitySample from '../components/reactivity-sample';
 import TwoWay from '../components/two-way';
 import VHtml from '../components/v-html';
+import StatusFromID from '../components/method-status-from-id';
+import FilterPositive from '../components/method-filter-positive';
 
 Vue.use(VueRouter);
 
@@ -88,6 +90,16 @@ const routes = [
         path: '/vhtml',
         name: 'VHtml',
         component: VHtml
+    },
+    {
+        path: '/statusfromid',
+        name: 'StatusFromID',
+        component: StatusFromID
+    },
+    {
+        path: '/filterpositive',
+        name: 'FilterPositive',
+        component: FilterPositive
     }
 ];
 
