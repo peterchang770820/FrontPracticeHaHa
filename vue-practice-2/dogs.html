@@ -1,0 +1,32 @@
+<html> 
+    <head>
+
+    </head>
+    <body>
+        <div id="app">
+            <ul>
+                <li v-for="dog in dogs" :key="dog">
+                    {{ dog }}
+                </li>
+            </ul>
+        </div>
+        <script src="https://unpkg.com/vue"></script>
+        <script>
+            const vm = new Vue({
+                el: '#app',
+                data: {
+                    dogs: ['Rex', 'Rover', 'Henrietta', 'Alan']
+                }
+            });
+            
+            // 不能用這種方法 assige 值
+            vm.dogs[2] = 'Bob';
+
+            // 法一
+            vm.dogs.splice(3,1, 'Kaew1');
+
+            // 法二
+            Vue.set(vm.dogs, 1, 'Peter');
+        </script>
+    </body>
+</html>

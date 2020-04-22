@@ -12,6 +12,11 @@ import CityRent from '../components/city-avg-rent';
 import VFor from '../components/v-for';
 import VBind from '../components/v-bind';
 import Seconds from '../components/seconds';
+import ReactivitySample from '../components/reactivity-sample';
+import TwoWay from '../components/two-way';
+import VHtml from '../components/v-html';
+import StatusFromID from '../components/method-status-from-id';
+import FilterPositive from '../components/method-filter-positive';
 
 Vue.use(VueRouter);
 
@@ -70,6 +75,31 @@ const routes = [
         path: '/seconds',
         name: 'Seconds',
         component: Seconds
+    },
+    {
+        path: '/rs',
+        name: 'RS',
+        component: ReactivitySample
+    },
+    {
+        path: '/twoway',
+        name: 'TwoWay',
+        component: TwoWay
+    },
+    {
+        path: '/vhtml',
+        name: 'VHtml',
+        component: VHtml
+    },
+    {
+        path: '/statusfromid',
+        name: 'StatusFromID',
+        component: StatusFromID
+    },
+    {
+        path: '/filterpositive',
+        name: 'FilterPositive',
+        component: FilterPositive
     }
 ];
 
