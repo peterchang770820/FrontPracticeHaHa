@@ -5,6 +5,10 @@
         {{ number }}
       </li>
     </ul>
+
+    <p>
+      {{ this.getPositiveNumbersSum() }}
+    </p>
   </div>
 </template>
 
@@ -23,6 +27,12 @@ export default {
   methods: {
     filterPositive(numbers){
       return numbers.filter((n) => n > 0);
+    },
+    getPositiveNumbers(){
+      return this.numbers.filter(n => n > 0);
+    },
+    getPositiveNumbersSum(){
+      return this.getPositiveNumbers().reduce((sum, val) => sum + val);
     }
   },
   created() {
